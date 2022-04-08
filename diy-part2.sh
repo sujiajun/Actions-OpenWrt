@@ -3,7 +3,7 @@
 sed -i 's/192.168.1.1/192.168.1.1/g' package/base-files/files/bin/config_generate
 #修改主机名
 sed -i 's/OpenWrt/H3C-Tx1801-Plus/g' package/base-files/files/bin/config_generate
-\cp -rf target/linux target
+
 #删除自带低版本xray-core
 #rm -rf feeds/packages/net/xray-core
 #rm -rf package/feeds/packages/xray-core
