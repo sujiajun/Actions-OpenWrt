@@ -7,7 +7,7 @@
 
 / {
 	compatible = "h3c,tx1801-plus", "mediatek,mt7621-soc";
-	model = "H3C-Tx1801-Plus";
+	model = "H3C Tx1801 Plus";
 
 	aliases {
 		led-boot = &led_sys_orange;
