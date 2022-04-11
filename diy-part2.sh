@@ -65,3 +65,12 @@ git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-ipt
 #添加smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+
+rm -rf package/lean/luci-theme-argon
+cd package
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+git clone https://github.com/jerrykuku/luci-app-argon-config.git
+git clone https://github.com/kenzok8/openwrt-packages.git
+git clone https://github.com/Ausaci/luci-app-nat6-helper.git
+git clone -b packages --single-branch https://github.com/xiaorouji/openwrt-passwall.git
+git clone https://github.com/ntlf9t/luci-app-easymesh
