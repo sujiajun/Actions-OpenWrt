@@ -1702,7 +1702,7 @@ define Device/h3c_tx1801-plus
   IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi | \
 	check-size
   DEVICE_VENDOR := H3C
-  DEVICE_MODEL := Tx1801 Plus
+  DEVICE_MODEL := Tx1801-Plus
   DEVICE_PACKAGES += kmod-mt7915e wpad-openssl uboot-envtools
   SUPPORTED_DEVICES += h3c,tx1801-plus
 endef
