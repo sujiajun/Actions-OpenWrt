@@ -8,11 +8,12 @@ sed -i 's/192.168.1.1/192.168.1.1/g' package/base-files/files/bin/config_generat
 #rm -rf package/feeds/packages/xray-core
 # 修改默认wifi名称ssid为H3C-Tx1801-Plus
 sed -i 's/ssid=OpenWrt/ssid=H3C-Tx1801-Plus/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+修改 argon 为默认主题,可根据你喜欢的修改成其他的（不选择那些会自动改变为默认主题的主题才有效果）
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 #配置ipv6、主题
 sed -i '/exit 0/d' package/lean/default-settings/files/zzz-default-settings
 cat default-settings/config_smartdns >> package/lean/default-settings/files/zzz-default-settings
 cat default-settings/config_ipv6 >> package/lean/default-settings/files/zzz-default-settings
-cat default-settings/config_theme >> package/lean/default-settings/files/zzz-default-settings
 cat default-settings/config_vssr >> package/lean/default-settings/files/zzz-default-settings
 echo "exit 0" >> package/lean/default-settings/files/zzz-default-settings
 # 版本号里显示一个自己的名字（KingKong build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
