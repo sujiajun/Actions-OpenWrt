@@ -31,7 +31,7 @@ sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac802
 #sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.10' target/linux/ramips/Makefile
 #切换ramips内核到5.15
 #sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.15' target/linux/ramips/Makefile
-#切换ramips内核到5.10
+#切换ramips内核到5.4
 sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.4' target/linux/ramips/Makefile
 
 #sirpdboy
@@ -75,4 +75,4 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git
 git clone https://github.com/kenzok8/openwrt-packages.git
 git clone https://github.com/Ausaci/luci-app-nat6-helper.git
 git clone -b packages --single-branch https://github.com/xiaorouji/openwrt-passwall.git
-git clone https://github.com/ntlf9t/luci-app-easymesh
+git clone https://github.com/destan19/OpenAppFilter.git
