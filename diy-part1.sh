@@ -16,5 +16,5 @@
 
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-git clone -b packages --single-branch https://github.com/xiaorouji/openwrt-passwall.git
+git clone -b packages --single-branch https://github.com/xiaorouji/openwrt-passwall.git packages
 
