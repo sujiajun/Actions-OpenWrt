@@ -20,6 +20,4 @@ sed -i '$a src-git small8 https://github.com/kenzok8/small-package' feeds.conf.d
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git neobird https://github.com/thinktip/luci-theme-neobird.git' >>feeds.conf.default
 
-# 删除自带argon替换为jerrykuku版
-rm -rf package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+git clone https://github.com/kenzok78/luci-theme-argonne.git
