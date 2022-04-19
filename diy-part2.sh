@@ -25,7 +25,7 @@ sed -i "/commit luci/i\uci set luci.main.mediaurlbase='/luci-static/argon'" pack
 
 #复制uci-defaults脚本 
 mkdir -p files/etc/uci-defaults
-cp -f uci-scripts/* files/etc/uci-defaults
+cp -f $GITHUB_WORKSPACE/uci-scripts/* files/etc/uci-defaults
 
 # 版本号里显示一个自己的名字（KingKong build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
 sed -i "s/OpenWrt /KingKong build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
