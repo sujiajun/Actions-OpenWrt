@@ -5,7 +5,7 @@
 # 修改默认wifi名称ssid为H3C-Tx1801-Plus
 sed -i 's/ssid=OpenWrt/ssid=H3C-Tx1801-Plus/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
-# 删除lean自带argon，下载最新版
+# 删除自带argon为jerrykuku版
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
