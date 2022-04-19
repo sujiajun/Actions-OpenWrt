@@ -64,7 +64,7 @@ git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dns
 
 #git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 
-git clone https://github.com/kenzok8/small-package.git package/small-package 
+git clone https://github.com/kenzok8/small-package.git package/small-package
 
 #添加额外软件包
 git clone https://github.com/Ausaci/luci-app-nat6-helper.git package/luci-app-nat6-helper
