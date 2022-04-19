@@ -10,7 +10,7 @@ sed -i 's/192.168.1.1/192.168.1.1/g' package/base-files/files/bin/config_generat
 sed -i 's/ssid=OpenWrt/ssid=H3C-Tx1801-Plus/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 修改 argon 为默认主题,可根据你喜欢的修改成其他的（不选择那些会自动改变为默认主题的主题才有效果）
-#sed -i "/commit luci/i\uci set luci.main.mediaurlbase='/luci-static/argon'" package/lean/default-settings/files/zzz-default-settings
+sed -i "/commit luci/i\uci set luci.main.mediaurlbase='/luci-static/argon'" package/lean/default-settings/files/zzz-default-settings
 #配置ipv6、主题
 #sed -i '/exit 0/d' package/lean/default-settings/files/zzz-default-settings
 #cat default-settings/config_smartdns >> package/lean/default-settings/files/zzz-default-settings
@@ -63,6 +63,8 @@ git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/l
 git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
 
 #git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
+
+git clone https://github.com/kenzok8/small-package.git package/small-package 
 
 #添加额外软件包
 git clone https://github.com/Ausaci/luci-app-nat6-helper.git package/luci-app-nat6-helper
