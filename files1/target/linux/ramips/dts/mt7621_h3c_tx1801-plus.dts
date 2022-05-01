@@ -25,12 +25,12 @@
 		compatible = "gpio-leds";
 
 		led_sys_orange: sys_orange {
-			label = "orange:sys";
+			label = "Boot";
 			gpios = <&gpio 15 GPIO_ACTIVE_LOW>;
 		};
 
 		led_sys_green: sys_green {
-			label = "blue:green";
+			label = "Running";
 			gpios = <&gpio 16 GPIO_ACTIVE_LOW>;
 		};
 
