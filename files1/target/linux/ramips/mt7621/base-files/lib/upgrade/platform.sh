@@ -91,7 +91,7 @@ platform_do_upgrade() {
 	xiaomi,mi-router-cr6606|\
 	xiaomi,mi-router-cr6608|\
 	xiaomi,mi-router-cr6609|\
-  h3c,tx1801-plus|\
+        h3c,tx1801-plus|\
 	xiaomi,redmi-router-ac2100)
 		nand_do_upgrade "$1"
 		;;
