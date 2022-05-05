@@ -1890,8 +1890,20 @@ endef
 TARGET_DEVICES += xiaomi_mi-router-cr6609
 
 define Device/h3c_tx1801-plus
-  $(Device/xiaomi_mi-router-cr660x)
-  DEVICE_MODEL := h3c_tx1801-plus
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  DEVICE_VENDOR := H3C
+  DEVICE_MODEL := Tx1801-Plus
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  KERNEL_SIZE := 4096k
+  UBINIZE_OPTS := -E 5
+  IMAGE_SIZE := 128512k
+  IMAGES += firmware.bin
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+  IMAGE/firmware.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi | \
+	check-size
+  DEVICE_PACKAGES += kmod-mt7915e uboot-envtools
 endef
 TARGET_DEVICES += h3c_tx1801-plus
 
