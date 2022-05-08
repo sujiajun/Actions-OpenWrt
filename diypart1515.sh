@@ -10,13 +10,15 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git small8 https://github.com/kenzok8/small-package' feeds.conf.default
-
-# Add a feed source
-#echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-echo 'src-git neobird https://github.com/sujiajun/luci-theme-neobird.git' >>feeds.conf.default
-git clone -b 21.02 https://github.com/kenzok78/luci-theme-argonne
+# 下载自定义插件
+mkdir -p package/myapps
+cd package/myapps
+git clone https://github.com/jerrykuku/luci-theme-argon.git
+git clone https://github.com/jerrykuku/luci-app-argon-config.git
+git clone https://github.com/jerrykuku/luci-app-vssr.git
+git clone https://github.com/jerrykuku/lua-maxminddb.git
+git clone https://github.com/Ausaci/luci-app-nat6-helper.git
+svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+git clone -b packages --single-branch https://github.com/xiaorouji/openwrt-passwall.git
+git clone -b luci --single-branch https://github.com/xiaorouji/openwrt-passwall.git luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2.git
