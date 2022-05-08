@@ -38,8 +38,8 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 
 #设置WIFI
 sed -i 's/OpenWrt/H3C-Tx1801-Plus/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-sed -i 's/wireless.default_radio${devidx}.encryption=none/wireless.default_radio${devidx}.encryption=psk-mixed/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-sed -i '/encryption/a\set wireless.default_radio${devidx}.key=H3C-Tx1801-Plus' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed -i 's/wireless.default_radio${devidx}.encryption=none/wireless.default_radio${devidx}.encryption=psk-mixed/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed -i '/encryption/a\set wireless.default_radio${devidx}.key=H3C-Tx1801-Plus' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #删除一些zzz中的脚本
 #sed -i '/DISTRIB_/d' package/default-settings/files/zzz-default-settings
