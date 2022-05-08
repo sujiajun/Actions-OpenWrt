@@ -42,6 +42,6 @@ sed -i 's/OpenWrt/H3C-Tx1801-Plus/g' package/kernel/mac80211/files/lib/wifi/mac8
 #sed -i '/encryption/a\set wireless.default_radio${devidx}.key=H3C-Tx1801-Plus' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 #删除一些zzz中的脚本
-sed -i '/DISTRIB_/d' package/default-settings/files/zzz-default-settings
-sed -i '/footer.htm/d' package/default-settings/files/zzz-default-settings
-sed -i '/admin_status/d' package/default-settings/files/zzz-default-settings
+#sed -i '/DISTRIB_/d' package/default-settings/files/zzz-default-settings
+#sed -i '/footer.htm/d' package/default-settings/files/zzz-default-settings
+#sed -i '/admin_status/d' package/default-settings/files/zzz-default-settings
