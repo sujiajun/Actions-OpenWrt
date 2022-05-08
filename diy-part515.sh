@@ -45,3 +45,5 @@ sed -i 's/OpenWrt/H3C-Tx1801-Plus/g' package/kernel/mac80211/files/lib/wifi/mac8
 sed -i '/DISTRIB_/d' package/default-settings/files/zzz-default-settings
 sed -i '/footer.htm/d' package/default-settings/files/zzz-default-settings
 sed -i '/admin_status/d' package/default-settings/files/zzz-default-settings
+
+git clone https://github.com/kenzok8/small-package/luci-app-easymesh.git package/luci-app-easymesh
