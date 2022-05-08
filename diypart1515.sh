@@ -19,4 +19,3 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 git clone https://github.com/jerrykuku/lua-maxminddb.git
 git clone -b packages --single-branch https://github.com/xiaorouji/openwrt-passwall.git
 git clone -b luci --single-branch https://github.com/xiaorouji/openwrt-passwall.git luci-app-passwall
-git clone https://github.com/kenzok8/small-package/luci-theme-argon.git
