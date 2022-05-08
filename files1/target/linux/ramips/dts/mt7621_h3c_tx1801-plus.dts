@@ -135,7 +135,6 @@
 
 &gmac0 {
 	mtd-mac-address = <&factory 0x3fff4>;
-	nvmem-cell-names = "mac-address";
 };
 
 &switch0 {
@@ -164,7 +163,6 @@
 			status = "okay";
 			label = "wan";
 			mtd-mac-address = <&factory 0x3fffa>;
-			nvmem-cell-names = "mac-address";
 		};
 	};
 };
