@@ -1,13 +1,13 @@
 theme_argonne=$(opkg find luci-theme-argonne)
 
 if [ -n "$theme_argonne" ]; then
-	#修改默认主题为argonne
-	uci set luci.main.mediaurlbase=/luci-static/argonne
+	#修改默认主题为argon
+	uci set luci.main.mediaurlbase=/luci-static/argon
 	uci commit luci
 
 	#argon主题默认打开bing壁纸
 	#uci set argonne.@global[0].bing_background='1'
-	#uci commit argonne
+	#uci commit argon
 fi
 
 exit 0
