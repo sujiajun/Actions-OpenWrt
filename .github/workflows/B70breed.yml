@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/padavanonly/immortalwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: mu.config
@@ -76,7 +76,7 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        [ -e files ] && \cp -rf files1/target openwrt
+        [ -e files ] && \cp -rf b70hwnat/target openwrt
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
