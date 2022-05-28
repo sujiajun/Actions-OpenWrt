@@ -1,6 +1,10 @@
 #!/bin/sh
 # 修改登录IP
-#sed -i 's/192.168.1.1/192.168.1.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.1.1/g' package/base-files/files/bin/config_generate
+
+# 修改主机名
+echo '修改机器名称'
+sed -i 's/OpenWrt/OpenWrt/g' package/base-files/files/bin/config_generate
 
 # 修改默认wifi名称ssid为H3C-Tx1801-Plus
 sed -i 's/ssid=OpenWrt/ssid=H3C-Tx1801-Plus/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
